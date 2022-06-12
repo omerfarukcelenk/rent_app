@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:rent_app/authentication/register/view/register_view.dart';
-
+import 'package:rent_app/home/view/tab_view.dart';
+import 'package:rent_app/product_detail/view/product_detail.dart';
 import 'authentication/register/view_model/register_view_model.dart';
 
 void main() => runApp(
@@ -18,13 +18,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      theme: ThemeData(appBarTheme: AppBarTheme(iconTheme: IconThemeData(color: Colors.black))),
       debugShowCheckedModeBanner: false,
       title: 'Rent App',
-      home: RegisterView(),
+      home: ProductDetail(),
     );
   }
 }
-
-
-//test ömer
